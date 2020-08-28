@@ -10,4 +10,4 @@ pip install -r requirements.txt
 ## 2 этап.  Настройка конфигураций. 
 Для работы скрипта необходимо настроить такие вещи, как api_key, secret_key, а также конфигурацию подключения к БД Postgres. 
 
-! [API CONFIG] (https://raw.githubusercontent.com/Malomalsky/Patterns/master/locallibrary/code.png)
+![API CONFIG] (https://raw.githubusercontent.com/Malomalsky/Patterns/master/locallibrary/code.png)
