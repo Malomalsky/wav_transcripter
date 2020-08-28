@@ -12,21 +12,22 @@ from dbwork import *
 log.configure(**log_config)
 client = ClientSTT(api_key, secret_key)
 
+
 # Парсим командную строку. Единственный опциональный параметр - флаг записи в бд. (True по умолчанию)
 @log.catch
 @click.command()
 @click.argument('path')
 @click.argument('phone-number')
-@click.option('--db-write','-d', default=True, help='False если запись в БД не нужна.')
-@click.argument('step') 
+@click.option('--db-write', '-d', default=True, help='False если запись в БД не нужна.')
+@click.argument('step')
 def main(path, phone_number, db_write, step):
     try:
         response = client.recognize(path, audio_config)
         text = response[0]['alternatives'][0]['transcript']   # Распознанный текст. 
-    except ValueError: 
+    except ValueError:
         click.echo('Попробуйте указать правильный путь до wav-файла.')
         exit()
-    
+
     uid = uuid.uuid1()
 
     # Этап 1.
@@ -39,7 +40,7 @@ def main(path, phone_number, db_write, step):
             click.echo('-->Распознан автоответчик.')
         if db_write:
             insert(str(uid), auto[result], phone_number, response[0]['end_time'], text)  
-        logging.info(u' - '.join([str(uid), auto[result], phone_number,response[0]['end_time'], text])) # Логи
+        logging.info(u' - '.join([str(uid), auto[result], phone_number, response[0]['end_time'], text])) # Логи
         return result  # Возвращает 0 если АО, 1 - если человек.
      
         # Этап 2.
