@@ -1,6 +1,6 @@
 
 -- Запрос. Для работы с другими именами таблиц - поменять transcription -
--- (таблицы, где хранятся результаты распознования). А также задать даты. 
+-- (таблицы, где хранятся результаты распознавания). А также задать даты. 
 
 select a.tdate as RDate, a.result, count(a.tid), sum(a.duration), b.name as ProjectName, c.name as ServerName 
 from transcription as a
