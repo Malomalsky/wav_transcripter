@@ -36,10 +36,25 @@ python transcriptor.py --help
 
 ![](https://raw.githubusercontent.com/Malomalsky/Patterns/master/locallibrary/cli.PNG)
 
-Единственный опциональный параметр - запись в бд (True по умолчанию; -d False чтобы отключить). 
+Единственный опциональный параметр - запись в бд *(True по умолчанию; -d False чтобы отключить).* 
 
 **Использование скрипта выглядит следующим образом:** 
 ```
 transcriptor.py [OPTIONS] PATH PHONE_NUMBER STEP
 ```
+* PATH - путь до wav-файла. 
+* PHONE_NUMBER - телефонный номер. 
+* STEP - этап. Принимает два значения: 1 - распознования автоответчика; 2 - распознование положительной/отрицательной реакции. 
+
+Примеры: 
+![](https://raw.githubusercontent.com/Malomalsky/Patterns/master/locallibrary/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%801.PNG)
+![](https://raw.githubusercontent.com/Malomalsky/Patterns/master/locallibrary/%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%802.PNG)
+
+## Логи. 
+У стандартной библиотеки Python для логирования *logging* есть ряд проблем - логи разных уровней (ERROR, INFO, WARNING, etc.) записываются **в один файл**, нет возможности выбрать кодировку записи. Поэтому в дополнение к ней был решено использовать библиотеку [loguru](https://github.com/Delgan/loguru). С помощью нее ведется лог ошибок скрипта. 
+Лог с информацией (script.log) выглядит следующим образом: 
+```
+28-Aug-20 15:25:19 - 89851c52-e929-11ea-8992-d43d7e49fa06 - АО - 88005553535 - 5.700s - вас приветствует автоответчик оставьте сообщение после сигнала
+```
+В логе ошибок (error.log) предоставляется детальная информация об ошибке (от интерпритатора Python). 
 
