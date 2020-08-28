@@ -63,7 +63,7 @@ transcriptor.py [OPTIONS] PATH PHONE_NUMBER STEP
 ## Результат в БД. 
 А вот так результат выполнения скрипта выглядит в БД: 
 
-!(Result)[https://raw.githubusercontent.com/Malomalsky/Patterns/master/locallibrary/dbb.PNG]
+![Result](https://raw.githubusercontent.com/Malomalsky/Patterns/master/locallibrary/dbb.PNG)
 
 
 # Проблемы, узкие места и пути улучшения. 
@@ -80,7 +80,7 @@ transcriptor.py [OPTIONS] PATH PHONE_NUMBER STEP
 **хорошей практикой будут попытки распознования одной аудиозаписи разными кодеками(?)**. Наверно, в продакшен-коде так оно и есть. 
 
 ## Применение паттерна
-В скрипте есть взаимозаменяемые этапы - Этап 1 и Этап 2. Я задал их выполнение явно с помощью условий, что не является хорошей практикой. Для данной задачи отлично подойдет поведенческий паттерн (Стратегия)[https://refactoring.guru/ru/design-patterns/strategy]. 
+В скрипте есть взаимозаменяемые этапы - Этап 1 и Этап 2. Я задал их выполнение явно с помощью условий, что не является хорошей практикой. Для данной задачи отлично подойдет поведенческий паттерн [Стратегия](https://refactoring.guru/ru/design-patterns/strategy). 
 
 
 
