@@ -1,4 +1,5 @@
 import logging
+import os
 import uuid
 
 import click
@@ -24,6 +25,7 @@ def main(path, phone_number, db_write, step):
     try:
         response = client.recognize(path, audio_config)
         text = response[0]['alternatives'][0]['transcript']   # Распознанный текст. 
+        os.remove(path)
     except ValueError:
         click.echo('Попробуйте указать правильный путь до wav-файла.')
         exit()
