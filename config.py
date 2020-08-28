@@ -1,8 +1,8 @@
 import logging
 from sys import stdout
 
-api_key = ''
-secret_key = ''
+api_key = '****'
+secret_key = '****' 
 
 
 # Конфиг декодера аудио

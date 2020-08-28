@@ -11,7 +11,7 @@ conn_conf = {
 }
 
 # Название таблицы.
-table_name = 'transcription'
+table_name = ''
 
 
 def insert(uid, rs, ph, dr, tx):
