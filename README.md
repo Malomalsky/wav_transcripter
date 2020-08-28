@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 ![DB Model](https://raw.githubusercontent.com/Malomalsky/Patterns/master/locallibrary/db.PNG)
 
-Сниппет sql-кода для ее создания лежит [тут](https://github.com/Malomalsky/wav_transcripter/blob/master/create_table.sql)
+Сниппет sql-кода для ее создания лежит [тут](https://github.com/Malomalsky/wav_transcripter/blob/master/sql/create_table.sql)
 
 Далее, необходимо сконфигурировать подключение к БД. Для этого в [dbwork](https://github.com/Malomalsky/wav_transcripter/blob/master/dbwork.py) вписываем соответсвующие параметры: 
 
@@ -85,6 +85,16 @@ transcriptor.py [OPTIONS] PATH PHONE_NUMBER STEP
 
 ## Применение паттерна
 В скрипте есть взаимозаменяемые этапы - Этап 1 и Этап 2. Я задал их выполнение явно с помощью условий, что не является хорошей практикой. Для данной задачи отлично подойдет поведенческий паттерн [Стратегия](https://refactoring.guru/ru/design-patterns/strategy). 
+
+# Задание 2. 
+SQL-запрос для задания 2 лежит [тут](https://github.com/Malomalsky/wav_transcripter/blob/master/sql/zadanie2.sql)
+В верхней части файла - сам **запрос**. В нижней - **сниппет схемы БД**, на которой проводились тесты. Визуально она выглядит следующим образом: 
+![Scheme](https://raw.githubusercontent.com/Malomalsky/Patterns/master/locallibrary/dbbb.PNG)
+
+Результаты выполнения запроса: 
+![Res](https://raw.githubusercontent.com/Malomalsky/Patterns/master/locallibrary/photo_2020-08-28_22-14-27.jpg)
+
+Запрос выводит дату распознавания, ее результат, затем общее количество схожих результатов в одном проекте и на одном сервере, общую их длительность, затем имя проекта и имя сервера. 
 
 
 
