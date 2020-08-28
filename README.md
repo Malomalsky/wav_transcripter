@@ -89,9 +89,11 @@ transcriptor.py [OPTIONS] PATH PHONE_NUMBER STEP
 # Задание 2. 
 SQL-запрос для задания 2 лежит [тут](https://github.com/Malomalsky/wav_transcripter/blob/master/sql/zadanie2.sql)
 В верхней части файла - сам **запрос**. В нижней - **сниппет схемы БД**, на которой проводились тесты. Визуально она выглядит следующим образом: 
+
 ![Scheme](https://raw.githubusercontent.com/Malomalsky/Patterns/master/locallibrary/dbbb.PNG)
 
 Результаты выполнения запроса: 
+
 ![Res](https://raw.githubusercontent.com/Malomalsky/Patterns/master/locallibrary/photo_2020-08-28_22-14-27.jpg)
 
 Запрос выводит дату распознавания, ее результат, затем общее количество схожих результатов в одном проекте и на одном сервере, общую их длительность, затем имя проекта и имя сервера. 
